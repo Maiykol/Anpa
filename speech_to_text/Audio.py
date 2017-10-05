@@ -20,7 +20,6 @@ class Audio:
     NN_INPUT_LEN_IN_SEC = 0.3
 
 
-
     def __init__(self, file):
         # init attribs and get data
         self.channels = None
@@ -97,11 +96,6 @@ class Audio:
 
         # shaping the array to fit NN
         self.nn_input.reshape(n_chunk, stft_data_per_chunk * len(self.stft))
-
-
-
-audio = Audio("44100hz_16bit.wav")
-audio.show_spectrogram()
 
 
 
